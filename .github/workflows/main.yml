@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Check out AOSP code
       run: git clone https://android.googlesource.com/platform/packages/modules/Virtualization -b main
+    - name: install deps
+      run: sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y qemu-system-arm qemu-user-static
     - name: build the image
       run: sudo ./Virtualization/build/debian/build.sh image.raw
     - name: Publish the artifiacts

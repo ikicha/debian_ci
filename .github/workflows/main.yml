@@ -19,3 +19,7 @@ jobs:
       with:
         name: image
         path: image.raw
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: image.raw

@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-custom-image-job:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - name: Check out AOSP code
       run: git clone https://android.googlesource.com/platform/packages/modules/Virtualization -b main

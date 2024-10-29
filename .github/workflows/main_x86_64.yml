@@ -19,3 +19,11 @@ jobs:
       with:
         name: artifacts
         path: images.tar.gz
+    - name: Release with Notes
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: release_x86
+        files: |
+          images.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

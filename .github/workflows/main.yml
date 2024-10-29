@@ -22,7 +22,7 @@ jobs:
     - name: Release with Notes
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: release
+        tag_name: release_aarch64
         files: |
           images.tar.gz
       env:
